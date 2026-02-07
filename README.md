@@ -1,4 +1,6 @@
 # ⚡ EU ETS Grid Carbon Analytics
+<!-- PROJECT TITLE PAGE -->
+![EU ETS Grid Carbon Analytics](assets/images/EU-ETS-Grid-Carbon-Analytics.png)
 
 ### 💼 Business Use Case
 
@@ -14,6 +16,18 @@ This engine correlates **Physical Power Grid Data** (Generation by Coal, Gas, Wi
 
 ---
 
+## 🏗️ Project Architecture
+
+![Architecture Diagram](assets/images/architecture-diagram-EU-ETS-Grid-Carbon-Analytics.png)
+
+---
+
+## 📊 Dashboard & Analysis Report
+
+📄 **Interactive Dashboard Report:**  
+[Open Dashboard PDF](assets/images/dashboard.pdf)
+
+--
 ### 📊 Data Sources
 
 The pipeline aggregates data from two official sources to create a unified view of the European Carbon Market:
@@ -32,13 +46,6 @@ The pipeline aggregates data from two official sources to create a unified view 
 
 ---
 
-## 📊 Project Report
-
-[Click here to open PDF](https://github.com/sameerhussai230/EU-ETS-Grid-Carbon-Analytics/blob/main/dashboard.pdf)
-
-
----
-
 ### 🚀 Key Features
 
 *   **ETL Pipeline:** Extracts Excel data from EEA and enriches it with live API calls to Ember.
@@ -50,8 +57,6 @@ The pipeline aggregates data from two official sources to create a unified view 
 *   **Provisional Forecasting:** Generates 2024-2025 provisional data estimates based on EU Phase 4 reduction trends (if official registry data is delayed).
 
 *   **Interactive Dashboard:** Streamlit app with Plotly visualizations to analyze "Top Buyers" and "Correlation Scatter Plots".
-
-Here’s the same section rewritten cleanly and ready to **copy-paste directly into your GitHub README** 👇
 
 ---
 
@@ -70,13 +75,9 @@ cd EU-ETS-Grid-Carbon-Analytics
 python -m venv venv
 ```
 
-**Windows:**
-
 ```bash
 venv\Scripts\activate
 ```
-
-**Mac/Linux:**
 
 ```bash
 source venv/bin/activate
@@ -93,7 +94,7 @@ pip install -r requirements.txt
 Create a `.env` file in the root directory and add your Ember API key:
 
 ```env
-EMBER_API_KEY=your_api_key_here
+EMBER_API_KEY= api_key
 ```
 
 ---
