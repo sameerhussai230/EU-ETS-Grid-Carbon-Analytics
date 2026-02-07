@@ -32,6 +32,13 @@ The pipeline aggregates data from two official sources to create a unified view 
 
 ---
 
+## 📊 Project Report
+
+[Click here to open PDF](https://github.com/sameerhussai230/EU-ETS-Grid-Carbon-Analytics/blob/main/dashboard.pdf)
+
+
+---
+
 ### 🚀 Key Features
 
 *   **ETL Pipeline:** Extracts Excel data from EEA and enriches it with live API calls to Ember.
