@@ -116,5 +116,17 @@ Start the local analytics server:
 streamlit run app.py
 ```
 
+## 📜 Data Attribution & Licensing
+
+This project leverages open data to provide insights into the European carbon market. We gratefully acknowledge the following organizations for making their data publicly available:
+
+| Source | Data Content | License |
+| :--- | :--- | :--- |
+| **[European Environment Agency (EEA)](https://www.eea.europa.eu/)** | EU ETS Financial Compliance (Emissions, Allocations) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| **[Ember](https://ember-energy.org/)** | Yearly Electricity Generation & Grid Mix | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+
+### ⚖️ Disclaimer
+This repository is for **educational and research purposes only**. The analysis provided is a Proof of Concept (PoC) and should not be used as financial advice for trading European Emission Allowances (EUAs). While every effort is made to ensure data accuracy through the ETL pipeline, the authors are not responsible for any discrepancies in the source datasets.
+
 
 
