@@ -1,0 +1,59 @@
+(venv) C:\Drive_E\My_Work\EU_Grid_Carbon_Price_Correlation_Engine>python run_eda.py
+🔍 STARTING EDS (Exploratory Data Scanning) on: data/ETS_DataViewer_20250916.xlsx
+
+--- 1. RAW COLUMN HEADERS (As they appear in Excel) ---
+['Country Code', 'Year', 'Size', 'Value', 'Unit', 'Main Activity Sector Name', 'Main Activity Code', 'Country', 'ETS information', 'Active Installation', 'Entities']
+
+
+⏳ Loading full dataset... (This may take a moment)
+✅ Columns Normalized to Snake Case:
+['country_code', 'year', 'size', 'value', 'unit', 'main_activity_sector_name', 'main_activity_code', 'country', 'ets_information', 'active_installation', 'entities']
+--------------------------------------------------
+
+--- 2. DATASET SHAPE ---
+Rows: 97,269
+Columns: 11
+
+--- 3. MISSING VALUES CHECK ---
+value          38
+entities    19043
+dtype: int64
+
+--- 4. NUMERIC COLUMN STATS ---
+
+🔹 Column: [value]
+   Min: -106,300,839.74
+   Max: 13,599,228,772.00
+   Mean: 39,920,983.19
+
+🔹 Column: [entities]
+   Min: 1.00
+   Max: 12,149.00
+   Mean: 237.61
+
+--- 5. CATEGORICAL COLUMN ANALYSIS ---
+
+🔶 Column: [main_activity_sector_name]
+   Total Unique Values: 31
+   Values: ['10 Aviation', '20 Combustion of fuels', '20-99 All stationary installations', '21  Refining of mineral oil', '21-99 All industrial installations (excl. combustion)', '22  Production of coke', '23 Metal ore roasting or sintering', '24  Production of pig iron or steel', '25 Production or processing of ferrous metals', '26 Production of primary aluminium', '27 Production of secondary aluminium', '28 Production or processing of non-ferrous metals', '29 Production of cement clinker', '30 Production of lime, or calcination of dolomite/magnesite', '31 Manufacture of glass', '32 Manufacture of ceramics', '33 Manufacture of mineral wool', '34 Production or processing of gypsum or plasterboard', '35 Production of pulp', '36 Production of paper or cardboard', '37 Production of carbon black', '38 Production of nitric acid', '39 Production of adipic acid', '40 Production of glyoxal and glyoxylic acid', '41 Production of ammonia', '42 Production of bulk chemicals', '43 Production of hydrogen and synthesis gas', '44 Production of soda ash and sodium bicarbonate', '45 Capture of greenhouse gases under Directive 2009/31/EC', '50 Maritime Transport', '99 Other activity opted-in under Art. 24']
+
+🔶 Column: [ets_information]
+   Total Unique Values: 17
+   Values: ['1. Total allocated allowances (EUA or EUAA)', '1.1 Freely allocated allowances', '1.1.1 Free allocation to existing entities (Art. 10a(1))', '1.1.2 Free allocation from the new entrants reserve (Art. 10a(7))', '1.1.3 Free allocation for modernisation of electricity generation (Art. 10c)', '1.1.4 Swiss Free Allocated allowances for aircraft operators', '1.2 Correction to freely allocated allowances (not reflected in EUTL)', '1.3 Allowances auctioned or sold (EUAs and EUAAs)', '2. Verified emissions', '2.1 EU-ETS Verified Emission', '2.2 Swiss Verified Emissions for aircraft operators', '3. Estimate to reflect current ETS scope for allowances and emissions', '4. Total surrendered units', '4.1 Surrendered EU allowances (EUAs and EUAAs)', '4.2 Surrendered certified emission reductions (CERs)', '4.3 Surrendered emission reduction units (ERUs)', '4.4 Surrendered Units CHU/CHUAA']
+
+🔶 Column: [country]
+   Total Unique Values: 36
+   Values: ['All Countries', 'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czechia', 'Denmark', 'EU27', 'EU27 + UK', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Ireland', 'Italy', 'Latvia', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Northern Ireland', 'Norway', 'Poland', 'Portugal', 'Recovery and Resilience Facility', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'United Kingdom (excl. NI)']
+
+🔶 Column: [unit]
+   Total Unique Values: 2
+   Values: ['tonne of CO2 equ.', 'units']
+
+--- 6. PROJECT CRITICAL CHECKS ---
+Checking for required metrics in 'ets_information':
+   ✅ Found: '1. Total allocated allowances (EUA or EUAA)'
+   ✅ Found: '2. Verified emissions'
+
+✅ EDS Complete.
+
+(venv) C:\Drive_E\My_Work\EU_Grid_Carbon_Price_Correlation_Engine>
