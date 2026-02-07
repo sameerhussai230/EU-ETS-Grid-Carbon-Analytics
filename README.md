@@ -2,18 +2,32 @@
 <!-- PROJECT TITLE PAGE -->
 ![EU ETS Grid Carbon Analytics](assets/images/EU-ETS-Grid-Carbon-Analytics.png)
 
+---
+### 📖 Executive Summary
+The **EU ETS Grid Carbon Analytics** engine is a data pipeline and dashboard designed to uncover the hidden correlation between **Physical Energy Fundamentals** (Grid Generation) and **Financial Carbon Compliance** (EU ETS Deficits).
+
+By merging disparate datasets—official registry compliance logs (Excel) and live grid generation APIs (JSON)—this tool allows analysts to visualize how renewable intermittency (Low Wind/Solar) drives fossil fuel reliance, thereby increasing the demand for European Union Allowances (EUAs).
+
+---
+
 ### 💼 Business Use Case
 
-**Forecasting Carbon Price Volatility via Physical Fundamentals**
+#### 1. The "Merit Order" Correlation
+In European power markets, the "Merit Order" dictates that cheaper renewables run first. When Wind/Solar output drops, the grid shifts to the marginal producer: usually **Coal or Gas**.
+*   **The Problem:** Coal is approximately 2x more carbon-intensive than Gas.
+*   **The Insight:** A "Dunkelflaute" (dark doldrums: low wind/solar) forces a spike in Coal generation. This project quantifies exactly how much that physical shift impacts the financial "Carbon Deficit" of major utilities.
 
-This engine correlates **Physical Power Grid Data** (Generation by Coal, Gas, Wind) with **Financial Compliance Data** (EU ETS Verified Emissions vs. Free Allocations).
+#### 2. Value Proposition for Stakeholders
+*   **📉 For Commodities Traders (Alpha Generation):**
+    *   Identifies **Structural Shorts**: If a country like Germany or Poland shows a widening gap between verified emissions and free allowances *correlated* with a 15% rise in Coal burn, it signals strong buying pressure for Carbon Credits (EUAs).
+    *   **Signal:** High Coal Load + High Deficit = **Bullish Price Signal**.
 
-**Value Proposition:**
+*   **📊 For Energy Analysts (Fundamental Analysis):**
+    *   Validates whether a compliance deficit is "structural" (grid constraints requiring dirty power) or "transitional" (temporary economic activity).
+    *   Helps predict EUA demand before official yearly reports are released by tracking monthly grid intensity.
 
-*   **For Traders:** Identifies "structural shorts" (deficits). If a country with a high carbon deficit increases Coal generation, demand for EUAs (Carbon Credits) rises, signaling a **bullish price movement**.
-
-*   **For Analysts:** Validates if financial deficits are driven by structural grid constraints (e.g., Low Wind requiring High Coal) or temporary economic factors.
-
+*   **🛡️ For Risk Managers:**
+    *   Visualizes exposure. If a portfolio is short Carbon, and the tool forecasts a high-coal winter based on grid trends, hedging strategies can be adjusted early.
 ---
 
 ## 🏗️ Project Architecture
